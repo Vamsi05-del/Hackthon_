@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Events | College Tour App</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">College Tour</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="map.html">Campus Map</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="events-container">
+        <h2>College Events</h2>
+
+        <!-- Filter Section -->
+        <div class="filter-container">
+            <label for="fest-filter">Filter by Fest Type:</label>
+            <select id="fest-filter">
+                <option value="all">All</option>
+                <option value="tech">Tech Fest</option>
+                <option value="cultural">Cultural Fest</option>
+                <option value="sports">Sports Meet</option>
+                <option value="seminar">Seminar</option>
+                <option value="workshop">Workshop</option>
+            </select>
+
+            <label for="college-filter">Filter by College:</label>
+            <select id="college-filter">
+                <option value="all">All Colleges</option>
+                <option value="abc">CMR University</option>
+                <option value="xyz">CMRIT</option>
+                <option value="pqr">REVA University</option>
+                <option value="lmn">NITTE</option>
+                <option value="rst">Woxsen</option>
+            </select>
+        </div>
+
+        <div class="events-grid">
+            <!-- Tech Fest -->
+            <div class="event-card" data-fest="tech" data-college="abc">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1piiPhG5jfmGucuVnnwpJFKOiyDC0SP-r2w&s" alt="Tech Fest">
+                <div class="event-info">
+                    <h3>CMR University- Tech Fest</h3>
+                    <p><strong>Date:</strong> March 15, 2025</p>
+                    <p>Join us for AI, coding competitions, and more!</p>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Cultural Fest -->
+            <div class="event-card" data-fest="cultural" data-college="xyz">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlygX6hRq-zOIU6n4VU8YUvUlqvvfhlb6ttA&s" alt="Cultural Fest">
+                <div class="event-info">
+                    <h3>CMRIT - Cultural Fest</h3>
+                    <p><strong>Date:</strong> April 5, 2025</p>
+                    <p>Enjoy music, dance, and art performances.</p>
+                    <button class="btn">Register Now</button>
+                </div>
+            </div>
+
+            <!-- Sports Meet -->
+            <div class="event-card" data-fest="sports" data-college="pqr">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/REVA_University_Bangalore.png" alt="Sports Meet">
+                <div class="event-info">
+                    <h3>REVA University - Annual Sports Meet</h3>
+                    <p><strong>Date:</strong> May 10, 2025</p>
+                    <p>Compete in athletics and games.</p>
+                    <button class="btn">Join Now</button>
+                </div>
+            </div>
+
+            <!-- Seminar -->
+            <div class="event-card" data-fest="seminar" data-college="lmn">
+                <img src="https://facultytick.com/wp-content/uploads/2023/05/Nitte-Deemed-to-be-University.webp" alt="Seminar">
+                <div class="event-info">
+                    <h3>NITTE - Business Seminar</h3>
+                    <p><strong>Date:</strong> June 20, 2025</p>
+                    <p>Learn from top business experts.</p>
+                    <button class="btn">Reserve Seat</button>
+                </div>
+            </div>
+
+            <!-- Workshop -->
+            <div class="event-card" data-fest="workshop" data-college="rst">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwF_-WN6m-OmatZq2vhsvZexRN-XiuZl3EPVrvgf3IKJ_63NkqMi0p6OlDp0Yrz9adN_o&usqp=CAU" alt="Workshop">
+                <div class="event-info">
+                    <h3>Woxsen - AI & Robotics Workshop</h3>
+                    <p><strong>Date:</strong> July 5, 2025</p>
+                    <p>Get hands-on experience in AI.</p>
+                    <button class="btn">Register</button>
+                </div>
+            </div>
+
+             <!-- Workshop -->
+             <div class="event-card" data-fest="workshop" data-college="rst">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1piiPhG5jfmGucuVnnwpJFKOiyDC0SP-r2w&s" alt="Workshop">
+                <div class="event-info">
+                    <h3>CMR University - AI & Robotics Workshop</h3>
+                    <p><strong>Date:</strong> July 5, 2025</p>
+                    <p>Get hands-on experience in AI.</p>
+                    <button class="btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../script.js"></script>
+</body>
+</html>

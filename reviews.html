@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Reviews | College Tour App</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">College Tour</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="map.html">Campus Map</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="reviews-container">
+        <h2>Student & Visitor Reviews</h2>
+
+        <!-- Add Review Button -->
+        <button class="add-review-btn" onclick="toggleReviewForm()">Add Review</button>
+
+        <!-- Review Form -->
+        <div class="review-form-container" id="reviewForm">
+            <h3>Submit Your Review</h3>
+            <form id="reviewFormContent">
+                <div class="form-group">
+                    <label for="reviewer-name">Your Name:</label>
+                    <input type="text" id="reviewer-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="college-select">Select College:</label>
+                    <select id="college-select">
+                        <option value="abc">CMR University</option>
+                        <option value="xyz">CMRIT</option>
+                        <option value="pqr">REVA University</option>
+                        <option value="lmn">NITTE</option>
+                        <option value="rst">Woxsen</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating">
+                        <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ - Good</option>
+                        <option value="3">⭐⭐⭐ - Average</option>
+                        <option value="2">⭐⭐ - Below Average</option>
+                        <option value="1">⭐ - Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="review-text">Your Review:</label>
+                    <textarea id="review-text" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+        </div>
+
+        <!-- College Reviews -->
+        <div class="colleges-reviews">
+            <div class="college-reviews" id="abc-reviews">
+                <h3>CMR University</h3>
+            </div>
+            <div class="college-reviews" id="xyz-reviews">
+                <h3>CMRIT</h3>
+            </div>
+            <div class="college-reviews" id="pqr-reviews">
+                <h3>REVA University</h3>
+            </div>
+            <div class="college-reviews" id="lmn-reviews">
+                <h3>NITTE</h3>
+            </div>
+            <div class="college-reviews" id="rst-reviews">
+                <h3>Woxsen</h3>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>

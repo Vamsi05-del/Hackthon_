@@ -1,0 +1,633 @@
+/* ======== General Styles ======== */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* ======== Navbar ======== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0056b3;
+    padding: 15px 30px;
+    color: white;
+}
+
+.nav-left {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* ======== Banner Section ======== */
+.banner {
+    position: relative;
+    background: url('images/campus-banner.jpg') no-repeat center center/cover;
+    height: 400px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff5733;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e64a19;
+}
+
+/* ======== Colleges Section ======== */
+.colleges {
+    text-align: center;
+    padding: 40px;
+    background: white;
+}
+
+.college-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.college-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.college-card:hover {
+    transform: scale(1.05);
+}
+
+.college-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.college-card h3 {
+    color: #0056b3;
+    margin: 10px 0;
+}
+
+.college-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.college-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #0056b3;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.college-card .btn:hover {
+    background: #003c7a;
+}
+
+/* ======== Footer ======== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+}
+
+/* ======== Responsive Design ======== */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .college-list {
+        grid-template-columns: 1fr;
+    }
+
+    .college-card img {
+        height: 160px;
+    }
+}
+
+/* event */ 
+
+/* ======== Events Page ======== */
+.events-container {
+    text-align: center;
+    padding: 40px;
+    background: white;
+}
+
+.events-container h2 {
+    font-size: 30px;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Filter Section */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-container select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-container select:hover {
+    border-color: #0056b3;
+}
+
+/* Event Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Event Cards */
+.event-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filter-container select {
+        width: 80%;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card img {
+        height: 150px;
+    }
+}
+/* review */
+
+/* Reviews Page */
+.reviews-container {
+    text-align: center;
+    padding: 40px;
+    background: white;
+}
+
+.reviews-container h2 {
+    font-size: 30px;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Add Review Button */
+.add-review-btn {
+    padding: 12px 25px;
+    background: #ff5733;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.add-review-btn:hover {
+    background: #e64a19;
+}
+
+/* Review Form */
+.review-form-container {
+    display: none;
+    background: #f9f9f9;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.review-form-container h3 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.review-form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-form-container input,
+.review-form-container select,
+.review-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    padding: 10px;
+    width: 100%;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #003c7a;
+}
+
+/* College Reviews Section */
+.colleges-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Review Card */
+.review-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.review-card span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-form-container {
+        width: 90%;
+    }
+
+    .colleges-reviews {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* login_page */ 
+
+/* ======== Ultra-Advanced Login Page Styling ======== */
+
+/* Animated Gradient Background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ff6b6b, #556270, #4ecdc4, #c7f464);
+    background-size: 300% 300%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+/* Glassmorphism Login Box */
+.login-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Heading & Subtext */
+.login-container h2 {
+    font-size: 28px;
+    color: #fff;
+}
+
+.login-container p {
+    color: #f1f1f1;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.input-box input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    transition: border 0.3s;
+}
+
+.input-box input:focus {
+    border: 2px solid #ffcc00;
+}
+
+.input-box label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+}
+
+/* Floating Label Animation */
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #ffcc00;
+}
+
+/* Password Field with Eye Icon */
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Eye Icon Styling */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password i {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+
+.toggle-password i:hover {
+    color: #ffcc00;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff6b6b, #ffcc00);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #ffcc00, #ff6b6b);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+}
+
+/* Forgot Password & Signup Links */
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.login-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-links a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+    }
+}
+/* Map */
+
+/* ======== Campus Map Page Styling ======== */
+.map-container {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.map-container h1 {
+    font-size: 32px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.map-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.map-box {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.map-box:hover {
+    transform: scale(1.02);
+}
+
+.map-box h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* Google Maps Button */
+.map-btn {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #003d82;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-box {
+        width: 100%;
+    }
+
+    .map-container h1 {
+        font-size: 26px;
+    }
+}
+
+.h1 {
+    font-size: 15px;
+}
